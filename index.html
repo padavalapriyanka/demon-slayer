@@ -1,0 +1,543 @@
+--- START OF FILE index.html ---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demon Slayer: Kimetsu no Yaiba - The Official Fan Hub</title>
+    <meta name="description" content="Your ultimate destination for Demon Slayer: Kimetsu no Yaiba. Discover in-depth character profiles, explore thrilling story arcs, catch the latest anime news, and browse an exclusive media gallery.">
+    <meta name="keywords" content="Demon Slayer, Kimetsu no Yaiba, Tanjiro Kamado, Nezuko Kamado, Hashira, Anime, Manga, Ufotable, Story Arcs, Characters, News, Gallery">
+    <meta name="author" content="Your Name/Fan Hub Community">
+    <meta property="og:title" content="Demon Slayer: Kimetsu no Yaiba - The Official Fan Hub">
+    <meta property="og:description" content="Your ultimate destination for Demon Slayer: Kimetsu no Yaiba. Discover in-depth character profiles, explore thrilling story arcs, catch the latest anime news, and browse an exclusive media gallery.">
+    <meta property="og:image" content="https://yourwebsite.com/images/og_image.jpg"> <!-- Replace with a strong, representative image for social sharing -->
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Optional: Add preconnect for Google Fonts if you use them -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo" role="banner">
+                <a href="#home" aria-label="Demon Slayer Fan Hub Home">
+                    <img src="images/header_logo.png" alt="Demon Slayer: Kimetsu no Yaiba Official Fan Hub Logo">
+                </a>
+            </div>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#home" aria-current="page">Home</a></li>
+                    <li><a href="#characters">Characters</a></li>
+                    <li><a href="#hashira">Hashira</a></li> <!-- New Link -->
+                    <li><a href="#arcs">Story Arcs</a></li>
+                    <li><a href="#breathing-styles">Breathing Styles</a></li> <!-- New Link -->
+                    <li><a href="#media">Media & Gallery</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-controls="main-nav-list" aria-expanded="false" aria-label="Toggle navigation menu">&#9776;</button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- HERO SECTION -->
+        <section id="home" class="hero-section" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <h1 id="hero-heading">Unleash Your Spirit: Enter the World of <span>Demon Slayer</span></h1>
+                <p>Embark on an epic adventure where humanity's courage battles demonic despair. Witness the raw determination of Tanjiro Kamado as he fights to restore his sister's humanity and eradicate evil.</p>
+                <a href="#arcs" class="btn btn-primary" role="button">Discover the Legend</a>
+            </div>
+
+            <div class="hero-carousel">
+                <div class="carousel-track">
+                    <img src="images/tanjiro_fighting.png" alt="Tanjiro Kamado in a dynamic Water Breathing battle pose against a shadowy demon" loading="eager">
+                    <img src="images/nezuko_close_up.png" alt="Nezuko Kamado with glowing pink eyes and bamboo muzzle, conveying intensity and humanity" loading="lazy">
+                    <img src="images/hashira.png" alt="The formidable Demon Slayer Hashira standing united against a vibrant backdrop" loading="lazy">
+                </div>
+                <button class="carousel-btn prev" aria-label="Previous slide in hero carousel">&lt;</button>
+                <button class="carousel-btn next" aria-label="Next slide in hero carousel">&gt;</button>
+            </div>
+        </section>
+
+        <!-- CHARACTERS SECTION -->
+        <section id="characters" class="content-section" aria-labelledby="characters-heading">
+            <div class="container">
+                <h2 id="characters-heading">The Pillars of Resilience: Iconic Characters</h2>
+                <p class="section-description">Delve into the stories of the brave Demon Slayers and their unwavering resolve. Each character's journey is a testament to strength, sacrifice, and the bonds that define them.</p>
+
+                <div class="character-grid">
+                    <article class="character-card" aria-labelledby="tanjiro-heading">
+                        <img src="images/tanjiro.png" alt="Portrait of Tanjiro Kamado, showing his determined expression and scar" loading="lazy">
+                        <h3 id="tanjiro-heading">Tanjiro Kamado</h3>
+                        <p>The journey begins with Tanjiro, whose unwavering compassion and formidable Water Breathing techniques fuel his quest to save Nezuko and avenge his family.</p>
+                        <a href="character-tanjiro.html" class="btn btn-secondary" role="button">Explore Tanjiro's Profile</a>
+                    </article>
+
+                    <article class="character-card" aria-labelledby="nezuko-heading">
+                        <img src="images/nezuko.png" alt="Portrait of Nezuko Kamado with her bamboo muzzle and fierce, protective gaze" loading="lazy">
+                        <h3 id="nezuko-heading">Nezuko Kamado</h3>
+                        <p>Transformed into a demon, Nezuko defies her instincts to protect humanity, her unique Blood Demon Art and fierce loyalty making her a vital ally.</p>
+                        <a href="character-nezuko.html" class="btn btn-secondary" role="button">Explore Nezuko's Profile</a>
+                    </article>
+
+                    <article class="character-card" aria-labelledby="zenitsu-heading">
+                        <img src="images/zenitsu.png" alt="Portrait of Zenitsu Agatsuma, often depicting his fearful yet powerful demeanor" loading="lazy">
+                        <h3 id="zenitsu-heading">Zenitsu Agatsuma</h3>
+                        <p>Though prone to panic, Zenitsu's latent mastery of Thunder Breathing unleashes electrifying speed and power, surprising both allies and demons.</p>
+                        <a href="character-zenitsu.html" class="btn btn-secondary" role="button">Explore Zenitsu's Profile</a>
+                    </article>
+
+                    <article class="character-card" aria-labelledby="inosuke-heading">
+                        <img src="images/inosuke.png" alt="Portrait of Inosuke Hashibira, either with his boar mask or fierce expression" loading="lazy">
+                        <h3 id="inosuke-heading">Inosuke Hashibira</h3>
+                        <p>Raised in the wilderness, Inosuke’s wild Beast Breathing style and unyielding combat spirit make him an unpredictable and formidable force.</p>
+                        <a href="character-inosuke.html" class="btn btn-secondary" role="button">Explore Inosuke's Profile</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+<section id="hashira" class="content-section bg-light" aria-labelledby="hashira-heading">
+    <div class="container">
+        <h2 id="hashira-heading">The Elite Pillars: Hashira & Former Hashira</h2>
+        <p class="section-description">Behold the mightiest swordsmen of the Demon Slayer Corps! The Hashira are the elite of the elite, each a master of a unique breathing style, leading the fight against Muzan Kibutsuji and his demonic forces. This section also honors those who once bore the title.</p>
+
+        <div class="hashira-grid">
+            <article class="hashira-card" aria-labelledby="giyu-heading">
+                <img src="images/giyu_tomioka.png" alt="Portrait of Giyu Tomioka, the Water Hashira" loading="lazy">
+                <h3 id="giyu-heading">Giyu Tomioka <small>(Water Hashira)</small></h3>
+                <p>The stoic Water Hashira, Giyu developed his own eleventh form. He is known for his calm demeanor and exceptional swordsmanship.</p>
+            </article>
+
+            <article class="hashira-card" aria-labelledby="shinobu-heading">
+                <img src="images/shinobu_kocho.png" alt="Portrait of Shinobu Kocho, the Insect Hashira" loading="lazy">
+                <h3 id="shinobu-heading">Shinobu Kocho <small>(Insect Hashira)</small></h3>
+                <p>Though lacking physical strength to decapitate demons, Shinobu is a master of poisons and a highly agile fighter, serving as the Insect Hashira.</p>
+            </article>
+
+            <article class="hashira-card" aria-labelledby="kyojuro-heading">
+                <img src="images/kyojuro_rengoku.png" alt="Portrait of Kyojuro Rengoku, the Flame Hashira" loading="lazy">
+                <h3 id="kyojuro-heading">Kyojuro Rengoku <small>(Flame Hashira)</small></h3>
+                <p>The enthusiastic and charismatic Flame Hashira, Kyojuro is a powerful and selfless warrior who inspires all around him with his unwavering spirit.</p>
+            </article>
+
+            <article class="hashira-card" aria-labelledby="tengen-heading">
+                <img src="images/tengen_uzui.png" alt="Portrait of Tengen Uzui, the Sound Hashira" loading="lazy">
+                <h3 id="tengen-heading">Tengen Uzui <small>(Sound Hashira)</small></h3>
+                <p>The flamboyant Sound Hashira, Tengen is a former ninja who uses his unique "Musical Score" technique in battle alongside his dual blades.</p>
+            </article>
+
+            <article class="hashira-card" aria-labelledby="muichiro-heading">
+                <img src="images/muichiro_tokito.png" alt="Portrait of Muichiro Tokito, the Mist Hashira" loading="lazy">
+                <h3 id="muichiro-heading">Muichiro Tokito <small>(Mist Hashira)</small></h3>
+                <p>A prodigious swordsman, Muichiro became a Hashira in just two months. He is quiet and often lost in thought, but terrifying in combat as the Mist Hashira.</p>
+            </article>
+
+            <article class="hashira-card" aria-labelledby="mitsuri-heading">
+                <img src="images/mitsuri_kanroji.png" alt="Portrait of Mitsuri Kanroji, the Love Hashira" loading="lazy">
+                <h3 id="mitsuri-heading">Mitsuri Kanroji <small>(Love Hashira)</small></h3>
+                <p>The gentle and affectionate Love Hashira, Mitsuri possesses incredible flexibility and strength, wielding a unique, whip-like Nichirin blade.</p>
+            </article>
+
+            <article class="hashira-card" aria-labelledby="obanai-heading">
+                <img src="images/obanai_iguro.png" alt="Portrait of Obanai Iguro, the Serpent Hashira" loading="lazy">
+                <h3 id="obanai-heading">Obanai Iguro <small>(Serpent Hashira)</small></h3>
+                <p>The strict and enigmatic Serpent Hashira, Obanai fights alongside his snake companion, Kaburamaru, and employs a winding, serpentine breathing style.</p>
+            </article>
+
+            <article class="hashira-card" aria-labelledby="sanemi-heading">
+                <img src="images/sanemi_shinazugawa.png" alt="Portrait of Sanemi Shinazugawa, the Wind Hashira" loading="lazy">
+                <h3 id="sanemi-heading">Sanemi Shinazugawa <small>(Wind Hashira)</small></h3>
+                <p>The hot-headed and aggressive Wind Hashira, Sanemi is a relentless fighter whose rare marechi blood makes him especially appealing to demons.</p>
+            </article>
+
+            <article class="hashira-card" aria-labelledby="gyomei-heading">
+                <img src="images/gyomei_himejima.png" alt="Portrait of Gyomei Himejima, the Stone Hashira" loading="lazy">
+                <h3 id="gyomei-heading">Gyomei Himejima <small>(Stone Hashira)</small></h3>
+                <p>The strongest of the current Hashira, Gyomei is a gentle giant who uses a flail and axe, and weeps for humanity's suffering. He is the Stone Hashira.</p>
+            </article>
+
+            <article class="hashira-card former-hashira" aria-labelledby="urokodaki-heading">
+                <img src="images/sakonji_urokodaki.png" alt="Portrait of Sakonji Urokodaki, former Water Hashira" loading="lazy">
+                <h3 id="urokodaki-heading">Sakonji Urokodaki <small>(Former Water Hashira)</small></h3>
+                <p>Tanjiro's master and a former Water Hashira, Urokodaki trained many skilled Demon Slayers and resides on Mt. Sagiri.</p>
+            </article>
+            <article class="hashira-card former-hashira" aria-labelledby="jigoro-heading">
+                <img src="images/jigoro_kuwajima.png" alt="Portrait of Jigoro Kuwajima, former Thunder Hashira" loading="lazy">
+                <h3 id="jigoro-heading">Jigoro Kuwajima <small>(Former Thunder Hashira)</small></h3>
+                <p>Zenitsu and Kaigaku's master, and a former Thunder Hashira. Despite losing a leg, he meticulously trained his successors.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+        <!-- STORY ARCS SECTION -->
+        <section id="arcs" class="content-section" aria-labelledby="arcs-heading">
+            <div class="container">
+                <h2 id="arcs-heading">Chronicles of Courage: Journey Through the Story Arcs</h2>
+                <p class="section-description">Immerse yourself in the pivotal battles and emotional narratives that propel the Demon Slayer Corps forward. Each arc reveals new challenges, profound character growth, and breathtaking combat.</p>
+
+                <div class="story-arc-grid">
+                    <article class="story-arc-card">
+                        <h3>Final Selection Arc</h3>
+                        <p>Witness Tanjiro's grueling trial where only the strongest survive. This arc lays the foundation for his path as a Demon Slayer.</p>
+                        <img src="images/Final Selection Arc.png" alt="Wisteria flowers bloom around new Demon Slayers during the Final Selection Arc" loading="lazy">
+                    </article>
+
+                    <article class="story-arc-card">
+                        <h3>Mount Natagumo Arc</h3>
+                        <p>A harrowing encounter with the sinister Spider Family pushes the limits of Tanjiro and his comrades, revealing the terrifying power of demons.</p>
+                        <img src="images/Mount Natagumo Arc.png" alt="Tanjiro, Nezuko, Zenitsu, and Inosuke battling spider demons on Mount Natagumo" loading="lazy">
+                    </article>
+
+                    <article class="story-arc-card">
+                        <h3>Mugen Train Arc</h3>
+                        <p>A heart-wrenching mission with the charismatic Flame Hashira, Kyojuro Rengoku, aboard the mysterious Mugen Train. Sacrifice and valor define this legendary conflict.</p>
+                        <img src="images/Mugen Train Arc.png" alt="Epic clash between Flame Hashira Rengoku and Upper Rank Three demon Akaza" loading="lazy">
+                    </article>
+
+                    <article class="story-arc-card">
+                        <h3>Entertainment District Arc</h3>
+                        <p>Under the flamboyant guidance of Sound Hashira Tengen Uzui, the team infiltrates the glittering, yet deadly, Yoshiwara district to confront an Upper Rank demon.</p>
+                        <img src="images/Entertainment District Arc.png" alt="Tengen Uzui and the Demon Slayers in action within the vibrant Entertainment District" loading="lazy">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- BREATHING STYLES SECTION - NEW -->
+<section id="breathing-styles" class="content-section bg-light" aria-labelledby="breathing-styles-heading">
+    <div class="container">
+        <h2 id="breathing-styles-heading">Mastering the Blade: Breathing Styles & Forms</h2>
+        <p class="section-description">The foundation of a Demon Slayer's power lies in their Breathing Style. These unique sword techniques, derived from the Sun Breathing, allow them to mimic natural elements and amplify their physical abilities to combat demons. Explore the main styles and their devastating forms.</p>
+
+        <div class="breathing-styles-grid">
+            <!-- Water Breathing -->
+            <article class="style-card" aria-labelledby="water-heading">
+                <img src="images/water_breathing.png" alt="Illustration of Water Breathing, with flowing blue water effects around a sword" loading="lazy">
+                <h3 id="water-heading">Water Breathing <small>(水ノ呼吸)</small></h3>
+                <p>Flexible and adaptable, Water Breathing utilizes fluid movements for powerful, precise slashes. Mastered by Giyu Tomioka and Tanjiro Kamado.</p>
+                <ul>
+                    <li><strong>First Form:</strong> Water Surface Slash</li>
+                    <li><strong>Second Form:</strong> Water Wheel</li>
+                    <li><strong>Third Form:</strong> Flowing Dance</li>
+                    <li><strong>Fourth Form:</strong> Striking Tide</li>
+                    <li><strong>Fifth Form:</strong> Blessed Rain After the Drought</li>
+                    <li><strong>Sixth Form:</strong> Whirlpool</li>
+                    <li><strong>Seventh Form:</strong> Drop Ripple Thrust Curve</li>
+                    <li><strong>Eighth Form:</strong> Waterfall Basin</li>
+                    <li><strong>Ninth Form:</strong> Splashing Water Flow, Turbulent</li>
+                    <li><strong>Tenth Form:</strong> Constant Flux</li>
+                    <li><strong>Eleventh Form:</strong> Dead Calm <small>(Giyu's original form)</small></li>
+                </ul>
+            </article>
+
+            <!-- Thunder Breathing -->
+            <article class="style-card" aria-labelledby="thunder-heading">
+                <img src="images/thunder_breathing.png" alt="Illustration of Thunder Breathing, with crackling yellow lightning effects" loading="lazy">
+                <h3 id="thunder-heading">Thunder Breathing <small>(雷ノ呼吸)</small></h3>
+                <p>Focuses on immense speed and rapid strikes, allowing for lightning-fast movement. Zenitsu Agatsuma is its most prominent user.</p>
+                <ul>
+                    <li><strong>First Form:</strong> Thunderclap and Flash <small>(Sixfold, Eightfold, Godspeed)</small></li>
+                    <li><strong>Second Form:</strong> Rice Spirit</li>
+                    <li><strong>Third Form:</strong> Thunder Swarm</li>
+                    <li><strong>Fourth Form:</strong> Distant Thunder</li>
+                    <li><strong>Fifth Form:</strong> Heat Lightning</li>
+                    <li><strong>Sixth Form:</strong> Rumble and Flash</li>
+                    <li><strong>Seventh Form:</strong> Honoikazuchi God <small>(Zenitsu's original form)</small></li>
+                </ul>
+            </article>
+
+            <!-- Flame Breathing -->
+            <article class="style-card" aria-labelledby="flame-heading">
+                <img src="images/flame_breathing.png" alt="Illustration of Flame Breathing, with intense orange and red fire effects" loading="lazy">
+                <h3 id="flame-heading">Flame Breathing <small>(炎ノ呼吸)</small></h3>
+                <p>A powerful and aggressive style with strong, direct attacks and immense destructive power, typically mastered by the Rengoku family.</p>
+                <ul>
+                    <li><strong>First Form:</strong> Unknowing Fire</li>
+                    <li><strong>Second Form:</strong> Rising Scorching Sun</li>
+                    <li><strong>Third Form:</strong> Blazing Universe</li>
+                    <li><strong>Fourth Form:</strong> Blooming Flame Undulation</li>
+                    <li><strong>Fifth Form:</strong> Flame Tiger</li>
+                    <li><strong>Ninth Form:</strong> Rengoku <small>(Kyojuro's most powerful form)</small></li>
+                </ul>
+            </article>
+
+            <!-- Wind Breathing -->
+            <article class="style-card" aria-labelledby="wind-heading">
+                <img src="images/wind_breathing.png" alt="Illustration of Wind Breathing, with swirling green wind effects" loading="lazy">
+                <h3 id="wind-heading">Wind Breathing <small>(風ノ呼吸)</small></h3>
+                <p>Utilizes rapid, sweeping slashes that mimic strong gusts of wind, overwhelming opponents with sheer force and unpredictability. Used by Sanemi Shinazugawa.</p>
+                <ul>
+                    <li><strong>First Form:</strong> Dust Whirlwind Cutter</li>
+                    <li><strong>Second Form:</strong> Claws-Purifying Wind</li>
+                    <li><strong>Third Form:</strong> Clean Storm Wind Tree</li>
+                    <li><strong>Fourth Form:</strong> Rising Dust Storm</li>
+                    <li><strong>Fifth Form:</strong> Cold Mountain Wind</li>
+                    <li><strong>Sixth Form:</strong> Black Wind Mountain Mist</li>
+                    <li><strong>Seventh Form:</strong> Gale - Sudden Gusts</li>
+                    <li><strong>Eighth Form:</strong> Primary Gale Slash</li>
+                    <li><strong>Ninth Form:</strong> Idaten Typhoon</li>
+                </ul>
+            </article>
+
+            <!-- Stone Breathing -->
+            <article class="style-card" aria-labelledby="stone-heading">
+                <img src="images/stone_breathing.png" alt="Illustration of Stone Breathing, with rocky grey and brown earth effects" loading="lazy">
+                <h3 id="stone-heading">Stone Breathing <small>(岩ノ呼吸)</small></h3>
+                <p>A robust and defensive style that leverages immense physical strength and specialized weapons, providing unparalleled durability. Mastered by Gyomei Himejima.</p>
+                <ul>
+                    <li><strong>First Form:</strong> Serpentinite Bipolar</li>
+                    <li><strong>Second Form:</strong> Upper Crushing Smash</li>
+                    <li><strong>Third Form:</strong> Rhyolitic Deluge</li>
+                    <li><strong>Fourth Form:</strong> Volcanic Rock - Rapid Conquest</li>
+                    <li><strong>Fifth Form:</strong> Arcs of Justice</li>
+                </ul>
+            </article>
+
+            <!-- Mist Breathing -->
+            <article class="style-card" aria-labelledby="mist-heading">
+                <img src="images/mist_breathing.png" alt="Illustration of Mist Breathing, with ethereal white and light blue mist effects" loading="lazy">
+                <h3 id="mist-heading">Mist Breathing <small>(霞ノ呼吸)</small></h3>
+                <p>Derived from Wind Breathing, it focuses on deceiving and disorienting opponents with unpredictable movements, creating openings for decisive strikes. Used by Muichiro Tokito.</p>
+                <ul>
+                    <li><strong>First Form:</strong> Low Clouds, Distant Haze</li>
+                    <li><strong>Second Form:</strong> Eight-Layered Mist</li>
+                    <li><strong>Third Form:</strong> Scattering Mist Splash</li>
+                    <li><strong>Fourth Form:</strong> Shifting Flow Slash</li>
+                    <li><strong>Fifth Form:</strong> Sea of Clouds and Haze</li>
+                    <li><strong>Sixth Form:</strong> Lunar Dispersing Mist</li>
+                    <li><strong>Seventh Form:</strong> Obscuring Clouds <small>(Muichiro's original form)</small></li>
+                </ul>
+            </article>
+
+            <!-- Love Breathing -->
+            <article class="style-card" aria-labelledby="love-heading">
+                <img src="images/love_breathing.png" alt="Illustration of Love Breathing, with pink and heart-shaped effects" loading="lazy">
+                <h3 id="love-heading">Love Breathing <small>(恋ノ呼吸)</small></h3>
+                <p>A unique style that utilizes a whip-like blade and incredible flexibility, combining graceful movements with powerful, far-reaching attacks. Developed by Mitsuri Kanroji.</p>
+                <ul>
+                    <li><strong>First Form:</strong> Shivers of First Love</li>
+                    <li><strong>Second Form:</strong> Love Pangs</li>
+                    <li><strong>Third Form:</strong> Catlove Shower</li>
+                    <li><strong>Fifth Form:</strong> Wavering String of Love - Wildclaw</li>
+                    <li><strong>Sixth Form:</strong> Kitty Paw Love Breeze</li>
+                </ul>
+            </article>
+
+            <!-- Serpent Breathing -->
+            <article class="style-card" aria-labelledby="serpent-heading">
+                <img src="images/serpent_breathing.png" alt="Illustration of Serpent Breathing, with winding green snake-like effects" loading="lazy">
+                <h3 id="serpent-heading">Serpent Breathing <small>(蛇ノ呼吸)</small></h3>
+                <p>Characterized by twisting, coiling movements and slashes, mimicking a serpent's strike to hit opponents from unexpected angles. Used by Obanai Iguro.</p>
+                <ul>
+                    <li><strong>First Form:</strong> Winding Serpent Slash</li>
+                    <li><strong>Second Form:</strong> Venom of the Narrow Head</li>
+                    <li><strong>Third Form:</strong> Coil Choke</li>
+                    <li><strong>Fourth Form:</strong> Twin-Headed Reptile</li>
+                    <li><strong>Fifth Form:</strong> Slithering Serpent Slash</li>
+                </ul>
+            </article>
+
+            <!-- Insect Breathing -->
+            <article class="style-card" aria-labelledby="insect-heading">
+                <img src="images/insect_breathing.png" alt="Illustration of Insect Breathing, with purple butterfly wing effects and poison" loading="lazy">
+                <h3 id="insect-heading">Insect Breathing <small>(蟲ノ呼吸)</small></h3>
+                <p>A specialized style that uses a unique thrusting sword to inject various wisteria-based poisons into demons, compensating for lack of decapitating power. Developed by Shinobu Kocho.</p>
+                <ul>
+                    <li><strong>Dance of the Butterflies:</strong> Caprice</li>
+                    <li><strong>Dance of the Hornet:</strong> Sting</li>
+                    <li><strong>Dance of the Dragonfly:</strong> Compound Eye Hexagon</li>
+                    <li><strong>Dance of the Centipede:</strong> Hundred-Legged Zigzag</li>
+                </ul>
+            </article>
+
+            <!-- Sound Breathing -->
+            <article class="style-card" aria-labelledby="sound-heading">
+                <img src="images/sound_breathing.png" alt="Illustration of Sound Breathing, with vibrant sound wave effects and explosives" loading="lazy">
+                <h3 id="sound-heading">Sound Breathing <small>(音ノ呼吸)</small></h3>
+                <p>Developed by Tengen Uzui, this flamboyant style uses explosive kunai and a "Musical Score" technique to analyze and counter enemy attacks.</p>
+                <ul>
+                    <li><strong>First Form:</strong> Roar</li>
+                    <li><strong>Fourth Form:</strong> Constant Resounding Slashes</li>
+                    <li><strong>Fifth Form:</strong> String Performance</li>
+                </ul>
+            </article>
+
+            <!-- Beast Breathing -->
+            <article class="style-card" aria-labelledby="beast-heading">
+                <img src="images/beast_breathing.png" alt="Illustration of Beast Breathing, with wild blue and grey claw-like effects" loading="lazy">
+                <h3 id="beast-heading">Beast Breathing <small>(獣ノ呼吸)</small></h3>
+                <p>Developed by Inosuke Hashibira, this wild and unpredictable style enhances his senses and allows for erratic, powerful attacks with dual blades.</p>
+                <ul>
+                    <li><strong>First Fang:</strong> Pierce</li>
+                    <li><strong>Second Fang:</strong> Slice</li>
+                    <li><strong>Third Fang:</strong> Devour</li>
+                    <li><strong>Fourth Fang:</strong> Mince</li>
+                    <li><strong>Fifth Fang:</strong> Crazy Cutting</li>
+                    <li><strong>Sixth Fang:</strong> Palisade Bite</li>
+                    <li><strong>Seventh Form:</strong> Spatial Awareness</li>
+                    <li><strong>Eighth Fang:</strong> Explosive Rush</li>
+                    <li><strong>Ninth Fang:</strong> Extending Bendy Slash</li>
+                    <li><strong>Tenth Fang:</strong> Whirling Fangs</li>
+                    <li><strong>Sudden Throw:</strong> <small>(Inosuke's original technique)</small></li>
+                </ul>
+            </article>
+
+            <!-- Sun Breathing -->
+            <article class="style-card" aria-labelledby="sun-heading">
+                <img src="images/sun_breathing.png" alt="Illustration of Sun Breathing, with radiant orange and yellow sun effects" loading="lazy">
+                <h3 id="sun-heading">Sun Breathing <small>(日ノ呼吸)</small></h3>
+                <p>The original and most powerful breathing style, from which all other styles are derived. It harnesses the power of the sun to eradicate demons completely.</p>
+                <ul>
+                    <li><strong>First Form:</strong> Dance</li>
+                    <li><strong>Second Form:</strong> Clear Blue Sky</li>
+                    <li><strong>Third Form:</strong> Raging Sun</li>
+                    <li><strong>Fourth Form:</strong> Fake Rainbow</li>
+                    <li><strong>Fifth Form:</strong> Fire Wheel</li>
+                    <li><strong>Sixth Form:</strong> Solar Heat Haze</li>
+                    <li><strong>Seventh Form:</strong> Beneficent Radiance</li>
+                    <li><strong>Eighth Form:</strong> Dragon Sun Halo Head Dance</li>
+                    <li><strong>Ninth Form:</strong> Setting Sun Transformation</li>
+                    <li><strong>Tenth Form:</strong> Burning Bones, Summer Sun</li>
+                    <li><strong>Eleventh Form:</strong> Solar Flare Dance</li>
+                    <li><strong>Twelfth Form:</strong> Flame Dance</li>
+                </ul>
+            </article>
+            
+            <!-- Moon Breathing (as a unique/demon style example) -->
+            <article class="style-card" aria-labelledby="moon-heading">
+                <img src="images/moon_breathing.png" alt="Illustration of Moon Breathing, with crescent moon shapes and dark blue/purple effects" loading="lazy">
+                <h3 id="moon-heading">Moon Breathing <small>(月ノ呼吸)</small></h3>
+                <p>A unique and deadly breathing style used by Upper Rank One, Kokushibo. It generates chaotic, crescent-shaped blades from the sword with unpredictable range and power.</p>
+                <ul>
+                    <li><strong>First Form:</strong> Dark Moon - Evening Palace</li>
+                    <li><strong>Second Form:</strong> Pearl Flowers Moongazing</li>
+                    <li><strong>Third Form:</strong> Loathsome Moon - Chains</li>
+                    <li><strong>Fifth Form:</strong> Moon-Spirit Calamity</li>
+                    <li><strong>Sixth Form:</strong> Perpetual Night, Lonely Moon - Incessant</li>
+                    <li><strong>Seventh Form:</strong> Mirror of Misfortune - Moonlight</li>
+                    <li><strong>Eighth Form:</strong> Moon-Dragon Ringtail</li>
+                    <li><strong>Ninth Form:</strong> Descending Moon - Phases</li>
+                    <li><strong>Tenth Form:</strong> Drilling Slashes - Moon Through Bamboo Leaves</li>
+                    <li><strong>Fourteenth Form:</strong> Catastrophe - Tenman Crescent Moon</li>
+                    <li><strong>Sixteenth Form:</strong> Moonbow - Half Moon</li>
+                </ul>
+            </article>
+
+        </div>
+    </div>
+</section>
+        <!-- MEDIA & GALLERY SECTION -->
+        <section id="media" class="content-section" aria-labelledby="media-heading">
+            <div class="container">
+                <h2 id="media-heading">Visual Spectacle: Media & Gallery</h2>
+                <p class="section-description">Immerse yourself in a curated collection of high-resolution artwork, iconic scenes, and captivating visuals from the world of Demon Slayer: Kimetsu no Yaiba.</p>
+
+                <div class="gallery-grid">
+                    <figure class="gallery-item" role="group" aria-label="Tanjiro's Water Breathing Form artwork">
+                        <img src="images/Tanjiro's Water Breathing.png" alt="Dynamic artwork of Tanjiro Kamado performing a powerful Water Breathing technique" loading="lazy">
+                        <figcaption>Tanjiro’s Signature Water Breathing Form</figcaption>
+                    </figure>
+                    <figure class="gallery-item" role="group" aria-label="Nezuko's Blood Demon Art scene">
+                        <img src="images/Nezuko's Blood Demon Art.png" alt="Nezuko Kamado unleashing her fiery Blood Demon Art in battle" loading="lazy">
+                        <figcaption>Nezuko’s Explosive Blood Demon Art</figcaption>
+                    </figure>
+                    <figure class="gallery-item" role="group" aria-label="Hashira group pose artwork">
+                        <img src="images/Hashira Group Shot.png" alt="The elite Hashira of the Demon Slayer Corps gathered in an impressive pose" loading="lazy">
+                        <figcaption>The Indomitable Hashira — Pillars of Strength</figcaption>
+                    </figure>
+                    <figure class="gallery-item" role="group" aria-label="Rengoku versus Akaza battle from Mugen Train">
+                        <img src="images/Rengoku fighting Akaza (Mugen Train).png" alt="Intense battle scene between Flame Hashira Rengoku and Upper Rank Three demon Akaza" loading="lazy">
+                        <figcaption>Clash of Legends: Rengoku vs. Akaza</figcaption>
+                    </figure>
+                </div>
+                <div class="text-center" style="margin-top: 30px;">
+                    <a href="gallery.html" class="btn btn-primary" role="button">View Complete Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWS SECTION -->
+        <section id="news" class="content-section bg-light" aria-labelledby="news-heading">
+            <div class="container">
+                <h2 id="news-heading">Breaking News & Official Announcements</h2>
+                <p class="section-description">Stay at the forefront of the Demon Slayer universe! Get the latest updates on anime seasons, manga releases, merchandise, and fan community events.</p>
+
+                <div class="news-list" role="feed" aria-label="Latest Demon Slayer News">
+                    <article class="news-item" aria-labelledby="news1-heading">
+                        <h3 id="news1-heading">New Anime Season Confirmed!</h3>
+                        <p class="news-meta">Published on <time datetime="2023-10-26">October 26, 2023</time></p>
+                        <p>Ufotable has officially announced the production of the next thrilling Demon Slayer anime season. Prepare for breathtaking animation and an unforgettable storyline!</p>
+                        <a href="news-article-1.html" class="btn btn-link" role="link">Read Full Article</a>
+                    </article>
+
+                    <article class="news-item" aria-labelledby="news2-heading">
+                        <h3 id="news2-heading">Exclusive Hashira Merchandise Drop</h3>
+                        <p class="news-meta">Published on <time datetime="2023-10-15">October 15, 2023</time></p>
+                        <p>Discover limited edition figures, authentic Nichirin sword replicas, and exclusive apparel inspired by the Hashira. A must-have for every dedicated fan!</p>
+                        <a href="merchandise.html" class="btn btn-link" role="link">Explore Merchandise</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="content-section" aria-labelledby="contact-heading">
+            <div class="container">
+                <h2 id="contact-heading">Connect with the Global Demon Slayer Community</h2>
+                <p class="section-description">Your voice matters! Share your feedback, fan theories, artwork, or collaboration ideas with us. Join the conversation and strengthen the bonds of the Corps!</p>
+
+                <form class="contact-form" aria-label="Contact Form" method="POST" action="submit-form.php"> <!-- Add action attribute for form submission -->
+                    <div class="form-group">
+                        <label for="name">Your Name:<span class="required-asterisk" aria-hidden="true">*</span></label>
+                        <input type="text" id="name" name="name" required autocomplete="name" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:<span class="required-asterisk" aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="e.g., tanjiro@demonslayer.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" placeholder="e.g., Feedback on website, Fan Art Submission">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message:<span class="required-asterisk" aria-hidden="true">*</span></label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Type your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" role="button">Send Message to the Corps</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; <span id="current-year">2025</span> Demon Slayer Fan Hub. All Rights Reserved.</p>
+            <p><small>Demon Slayer: Kimetsu no Yaiba™ is copyrighted by Koyoharu Gotouge / Shueisha / Aniplex / Ufotable. This is an unofficial fan-made website.</small></p>
+            <div class="social-links" aria-label="Connect with us on social media">
+                <a href="https://facebook.com/your-fan-page" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Facebook">
+                    <img src="images/facebook.png" alt="Facebook Icon">
+                </a>
+                <a href="https://twitter.com/your-fan-account" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Twitter">
+                    <img src="images/twitter.png" alt="Twitter Icon">
+                </a>
+                <a href="https://instagram.com/your-fan-account" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Instagram">
+                    <img src="images/instagram.png" alt="Instagram Icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Dynamically update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

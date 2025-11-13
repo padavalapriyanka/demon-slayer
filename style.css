@@ -1,0 +1,992 @@
+/*----------------------------------------------------*/
+/*  0. CSS VARIABLES & BASE STYLES                    */
+/*----------------------------------------------------*/
+
+:root {
+    --color-primary-red: #A02020;
+    --color-primary-red-dark: #8C1C1C;
+    --color-secondary-green: #4CAF50;
+    --color-secondary-green-dark: #3e8e41;
+    --color-accent-yellow: #FFC107;
+    --color-accent-yellow-dark: #e0a800;
+    --color-dark: #1a1a2e;
+    --color-dark-light: #2c3e50;
+    --color-light: #f8f9fa;
+    --color-white: #ffffff;
+    --color-text-dark: #333333;
+    --color-text-light: #666666;
+
+    --font-family-primary: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-family-secondary: 'Georgia', serif;
+    --font-size-base: 1rem;
+    --line-height-base: 1.6;
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-circle: 50%;
+
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.18);
+    --shadow-interactive: 0 6px 15px rgba(0, 0, 0, 0.15);
+
+    --transition-fast: 0.2s ease-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--font-size-base);
+}
+
+body {
+    font-family: var(--font-family-primary);
+    line-height: var(--line-height-base);
+    color: var(--color-text-dark);
+    background-color: var(--color-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-primary);
+    color: var(--color-dark);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+
+p {
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-base);
+}
+
+a {
+    color: var(--color-primary-red);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover, a:focus {
+    color: var(--color-primary-red-dark);
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-description {
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-section {
+    padding: var(--spacing-xxl) 0;
+    margin-bottom: var(--spacing-lg);
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+}
+
+.content-section.bg-light {
+    background-color: var(--color-light);
+    box-shadow: none;
+}
+
+/*----------------------------------------------------*/
+/*  1. HEADER & NAVIGATION                            */
+/*----------------------------------------------------*/
+
+.main-header {
+    background-color: var(--color-dark);
+    padding: var(--spacing-sm) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--spacing-md);
+}
+
+.main-header .logo img {
+    height: 55px;
+    width: auto;
+    transition: transform var(--transition-fast);
+}
+
+.main-header .logo img:hover {
+    transform: scale(1.03);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: var(--spacing-lg);
+}
+
+.main-nav ul li a {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: var(--spacing-xs) 0;
+    position: relative;
+    letter-spacing: 0.05em;
+    transition: color var(--transition-fast);
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-primary-red);
+    transition: width var(--transition-normal);
+}
+
+.main-nav ul li a:hover::after,
+.main-nav ul li a.active::after {
+    width: 100%;
+}
+
+.main-nav ul li a:hover {
+    color: var(--color-primary-red);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 var(--spacing-xs);
+    line-height: 1;
+    transition: color var(--transition-fast);
+}
+
+.nav-toggle:hover, .nav-toggle:focus {
+    color: var(--color-primary-red);
+}
+
+/*----------------------------------------------------*/
+/*  2. HERO SECTION                                   */
+/*----------------------------------------------------*/
+
+.hero-section {
+    position: relative;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--color-dark);
+}
+
+.hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.carousel-track {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform var(--transition-slow);
+}
+
+.carousel-track img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.65);
+    transition: filter var(--transition-normal);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: var(--spacing-lg);
+    max-width: 900px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius-lg);
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-content h1 {
+    color: var(--color-white);
+    font-size: 3.8rem;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.03em;
+}
+
+.hero-content h1 span {
+    color: var(--color-primary-red);
+    font-family: var(--font-family-secondary);
+    font-style: italic;
+}
+
+.hero-content p {
+    font-size: 1.35rem;
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--color-white);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 2.2rem;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: var(--border-radius-md);
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.carousel-btn:hover, .carousel-btn:focus {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-btn.prev {
+    left: var(--spacing-md);
+}
+
+.carousel-btn.next {
+    right: var(--spacing-md);
+}
+
+/*----------------------------------------------------*/
+/*  3. BUTTONS                                        */
+/*----------------------------------------------------*/
+
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    transition: background-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: var(--color-primary-red);
+    color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--color-primary-red-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary-green);
+    color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: var(--color-secondary-green-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-link {
+    background: none;
+    color: var(--color-primary-red);
+    padding: 0;
+    margin-top: var(--spacing-sm);
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: var(--font-size-base);
+    text-transform: none;
+}
+
+.btn-link:hover, .btn-link:focus {
+    color: var(--color-dark);
+    text-decoration: none;
+    transform: none;
+    box-shadow: none;
+}
+
+/*----------------------------------------------------*/
+/*  4. CHARACTER GRID                                 */
+/*----------------------------------------------------*/
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    padding: var(--spacing-lg) 0;
+}
+
+.character-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.character-card:hover, .character-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-interactive);
+}
+
+.character-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+    margin: 0 auto var(--spacing-md) auto;
+    border: 4px solid var(--color-primary-red);
+    box-shadow: var(--shadow-sm);
+}
+
+.character-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary-red);
+    font-size: 1.8rem;
+}
+
+.character-card p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-lg);
+    flex-grow: 1; /* Ensures buttons align at bottom */
+}
+
+/*----------------------------------------------------*/
+/*  5. STORY ARC GRID                                 */
+/*----------------------------------------------------*/
+
+.story-arc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.story-arc-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.story-arc-card:hover, .story-arc-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-interactive);
+}
+
+.story-arc-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.story-arc-card:hover img {
+    transform: scale(1.05);
+}
+
+.story-arc-card h3 {
+    padding: var(--spacing-md) var(--spacing-lg) var(--spacing-xs) var(--spacing-lg);
+    color: var(--color-dark);
+    font-size: 1.8rem;
+}
+
+.story-arc-card p {
+    padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+    font-size: 1rem;
+    color: var(--color-text-dark);
+}
+
+/*----------------------------------------------------*/
+/*  6. GALLERY GRID                                   */
+/*----------------------------------------------------*/
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.gallery-item {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    cursor: pointer;
+}
+
+.gallery-item:hover, .gallery-item:focus-within {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-interactive);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+    padding: var(--spacing-md);
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    text-align: center;
+    font-style: italic;
+}
+
+/*----------------------------------------------------*/
+/*  7. NEWS SECTION                                   */
+/*----------------------------------------------------*/
+
+.news-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-item {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+
+.news-item:hover, .news-item:focus-within {
+    box-shadow: var(--shadow-interactive);
+    transform: translateY(-3px);
+}
+
+.news-item h3 {
+    color: var(--color-primary-red);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.5rem;
+}
+
+.news-meta {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+}
+
+/*----------------------------------------------------*/
+/*  8. CONTACT FORM                                   */
+/*----------------------------------------------------*/
+
+.contact-form {
+    max-width: 650px;
+    margin: var(--spacing-xl) auto 0 auto;
+    background-color: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    color: var(--color-dark);
+    font-size: 1.05rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid #dee2e6;
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-base);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    background-color: #fcfcfc;
+    color: var(--color-text-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary-red);
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-red-rgb), 0.2);
+    outline: none;
+    background-color: var(--color-white);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.required-asterisk {
+    color: var(--color-primary-red);
+    margin-left: 3px;
+}
+
+.contact-form button[type="submit"] {
+    width: 100%;
+    padding: var(--spacing-md);
+    font-size: 1.15rem;
+    background-color: var(--color-primary-red);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: background-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.contact-form button[type="submit"]:hover, .contact-form button[type="submit"]:focus {
+    background-color: var(--color-primary-red-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/*----------------------------------------------------*/
+/*  9. FOOTER                                         */
+/*----------------------------------------------------*/
+
+.main-footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 5px solid var(--color-primary-red);
+}
+
+.main-footer p {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+}
+
+.main-footer small {
+    display: block;
+    max-width: 800px;
+    margin: var(--spacing-sm) auto var(--spacing-lg) auto;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.main-footer .social-links {
+    margin-top: var(--spacing-lg);
+}
+
+.main-footer .social-links a {
+    display: inline-block;
+    margin: 0 var(--spacing-sm);
+}
+
+.main-footer .social-links img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0.9) grayscale(0.2);
+    transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.main-footer .social-links img:hover {
+    transform: scale(1.1);
+    filter: brightness(1) grayscale(0);
+}
+
+
+/*----------------------------------------------------*/
+/*  10. RESPONSIVE DESIGN (MOBILE FIRST)              */
+/*----------------------------------------------------*/
+
+/* Small tablets and up */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-header .logo {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .main-nav {
+        flex-basis: 100%;
+        display: none;
+        width: 100%;
+        margin-top: var(--spacing-sm);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: var(--spacing-sm);
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav ul li {
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .main-nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: var(--spacing-md) var(--spacing-lg);
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: var(--spacing-md);
+        top: var(--spacing-md);
+    }
+
+    .hero-section {
+        height: 550px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+
+    .container {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .content-section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .character-grid, .story-arc-grid, .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .character-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .story-arc-card img {
+        height: 180px;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+
+    .contact-form {
+        padding: var(--spacing-lg);
+    }
+
+    .main-footer {
+        padding: var(--spacing-lg) 0;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.3rem; }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .hero-section {
+        height: 450px;
+    }
+
+    .hero-content {
+        padding: var(--spacing-md);
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.95rem;
+    }
+
+    .carousel-btn {
+        font-size: 1.8rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
+
+/*----------------------------------------------------*/
+/*  4. CHARACTER/HASHIRA/BREATHING STYLES GRIDS & CARDS */
+/*----------------------------------------------------*/
+
+/* Combined grid responsiveness for Character, Hashira, and Breathing Styles */
+.character-grid, .hashira-grid, .breathing-styles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    padding: var(--spacing-lg) 0;
+}
+
+/* Base card styling for all relevant sections */
+.character-card, .hashira-card, .style-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; /* For potential badges/overlays */
+}
+
+.character-card:hover, .character-card:focus-within,
+.hashira-card:hover, .hashira-card:focus-within,
+.style-card:hover, .style-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-interactive);
+}
+
+/* Base image styling for all relevant cards */
+.character-card img, .hashira-card img, .style-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+    margin: 0 auto var(--spacing-md) auto;
+    border: 4px solid var(--color-primary-red); /* Default character border */
+    box-shadow: var(--shadow-sm);
+}
+
+/* Specific styles for Hashira cards */
+.hashira-card img {
+    border-color: var(--color-dark-light); /* Different border color for Hashira */
+    border-radius: var(--border-radius-circle); /* Ensure circular for portraits */
+}
+
+.hashira-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-dark);
+    font-size: 1.8rem;
+}
+
+.hashira-card h3 small {
+    display: block; /* Puts the title/type on a new line */
+    font-size: 0.9em;
+    color: var(--color-text-light);
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.hashira-card.former-hashira img {
+    filter: grayscale(0.7); /* Slightly grayscale for former Hashira */
+    border-color: var(--color-text-light); /* Subtle border for former Hashira */
+}
+.hashira-card.former-hashira h3 {
+    color: var(--color-text-light);
+}
+
+/* Specific styles for Breathing Style cards */
+.style-card img {
+    border-radius: var(--border-radius-md); /* Square corners for breathing style illustrations */
+    border-color: var(--color-secondary-green); /* Green border for breathing styles */
+    height: 180px; /* Slightly different image height */
+    width: 100%; /* Take full width of card (minus padding) */
+    object-fit: contain; /* Ensure full image is visible, not cropped */
+    margin: 0 auto var(--spacing-md) auto;
+    background-color: var(--color-dark); /* Dark background for breathing style images */
+    padding: var(--spacing-sm); /* Padding inside border for image */
+}
+
+.style-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-secondary-green);
+    font-size: 1.7rem;
+}
+
+.style-card h3 small {
+    font-size: 0.8em;
+    color: var(--color-text-light);
+    font-weight: 400;
+    margin-left: 5px; /* Keeps the Japanese text on the same line if space allows */
+}
+
+.style-card ul {
+    list-style: none; /* Remove default list bullets */
+    text-align: left;
+    padding-left: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    font-size: 0.95rem;
+    color: var(--color-dark-light);
+    flex-grow: 1;
+}
+
+.style-card ul li {
+    margin-bottom: var(--spacing-xs);
+    position: relative;
+    padding-left: var(--spacing-md);
+}
+
+.style-card ul li:last-child {
+    margin-bottom: 0;
+}
+
+.style-card ul li::before {
+    content: "•"; /* Custom bullet point */
+    color: var(--color-primary-red);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.character-card p, .hashira-card p, .style-card p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-lg);
+    flex-grow: 1; /* Ensures buttons align at bottom */
+}
+
+
+/* Media query adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Combined grid responsiveness for Character, Hashira, and Breathing Styles */
+    .character-grid, .hashira-grid, .breathing-styles-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .character-card img, .hashira-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .style-card img {
+        height: 150px; /* Adjust for smaller screens */
+        padding: var(--spacing-xs); /* Less padding on smaller screens */
+    }
+
+    .style-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .style-card ul {
+        font-size: 0.9rem;
+        padding-left: var(--spacing-xs);
+    }
+
+    .style-card ul li {
+        padding-left: var(--spacing-md);
+    }
+}
